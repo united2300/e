@@ -47,16 +47,20 @@ class Player(pygame.sprite.Sprite):
 
 # Enemy class
 class Enemy(pygame.sprite.Sprite):
-    def __init__(self, x, y, color):
+    def __init__(self, x, y, color, speed):
         super().__init__()
         self.width = 50
         self.height = 30
         self.color = color
         self.rect = pygame.Rect(x, y, self.width, self.height)
         self.health = 100
+        self.speed = speed
 
     def move(self):
-        self.rect.y += 1
+        self.rect.x += self.speed
+        if self.rect.left < 0 or self.rect.right > SCREEN_WIDTH:
+            self.speed = -self.speed
+            self.rect.y += 30  # Move down after changing direction
 
     def draw(self, screen):
         pygame.draw.rect(screen, self.color, self.rect)
@@ -65,7 +69,7 @@ class Enemy(pygame.sprite.Sprite):
 def main():
     # Initialize
     player = Player()
-    enemy = Enemy(random.randint(50, SCREEN_WIDTH - 50), 50, RED)
+    enemy = Enemy(random.randint(50, SCREEN_WIDTH - 50), 50, RED, 3)
     player_ship = Ship(SCREEN_WIDTH // 2 - 25, SCREEN_HEIGHT - 50, BLUE)
     player.add_ship(player_ship)
 
