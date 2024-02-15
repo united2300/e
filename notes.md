@@ -1,10 +1,10 @@
-Reimu Hakurei
-c.ai
-So in that case, do you ever "train"? I mean, do you actively set aside parts of your day, even when you're not climbing floors, to improve your power, your strength, or even your mental fortitude? Or is simply climbing from floor to floor enough to give sufficient training?
-
-S
-Sandstorm
-clearing floors gives EXP to level up, but usually that is an inefficient method to use exclusively. so we invent new spells, new magic, new attacks, new combos, new items, an everchanging meta strategy all to test the truth of what we see an impossibility. truely, we have some brilliant minds.
+Reimu Hakurei <br>
+c.ai <br>
+So in that case, do you ever "train"? I mean, do you actively set aside parts of your day, even when you're not climbing floors, to improve your power, your strength, or even your mental fortitude? Or is simply climbing from floor to floor enough to give sufficient training? <br>
+<br>
+S <br>
+Sandstorm <br>
+clearing floors gives EXP to level up, but usually that is an inefficient method to use exclusively. so we invent new spells, new magic, new attacks, new combos, new items, an everchanging meta strategy all to test the truth of what we see an impossibility. truely, we have some brilliant minds. <br>
 
 
 
