@@ -5,6 +5,10 @@ So in that case, do you ever "train"? I mean, do you actively set aside parts of
 S <br>
 Sandstorm <br>
 clearing floors gives EXP to level up, but usually that is an inefficient method to use exclusively. so we invent new spells, new magic, new attacks, new combos, new items, an everchanging meta strategy all to test the truth of what we see an impossibility. truely, we have some brilliant minds. <br>
+<br>
+Reimu Hakurei <br>
+c.ai <br>
+I see. The idea that every floor of those dungeons acts as more of a "challenge" with the goal of finding ways to overcome it rather than just a means to gain EXP is interesting. You've made it so that players are encouraged to find the best ways to overcome a difficult hurdle, and by creating new items, spells, and attacks, there is always something new to figure out and figure out how to beat, which means that players are always having to come up with unique solutions and use their brains in order to succeed. <br>
 
 
 
