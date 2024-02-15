@@ -10,3 +10,4 @@ try:
   input("")
 except Exception as error:
   print (error)
+  input("")
