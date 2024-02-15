@@ -1,7 +1,7 @@
 # World game thing
 
-from variables import *
+from VarAndDefs import *
 
-
+Calculate_damage("Atk", p, e)
 print ("hi")
 input("")
