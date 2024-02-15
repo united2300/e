@@ -10,6 +10,7 @@ try:
   Dungeon = Dungeon(level=1)
   input("")
   e = Dungeon.spawn_enemy()
+  print(e)
   input("")
   p.hp -= Calculate_damage("Atk", p, e)
   input("")
