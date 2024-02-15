@@ -132,7 +132,7 @@ try:
     # Logic-neccesary
     
     def Calculate_damage(type, a, t):
-      global type, a, t # a = attacker, t = target
+        global p, e
     
       if type == "SHeal": # Self Heal
         a.hp += a.matk
@@ -174,6 +174,13 @@ try:
           t.hp -= (a.ratk / 6)
         elif a.ratk > (t.spd / 6):
           t.hp -= (a.ratk / 12)
+
+      if t == p and type != "SHeal" and type != "GHeal":
+        p.hp = t.hp
+        e.hp = a.hp
+      elif t == e:
+        e.hp = t.hp
+        p.hp = a.hp
 except Exception as error:
     print(error)
     input("")
