@@ -31,6 +31,9 @@ gain a random amount of stat buffs that equals to *1.01 your total PWR in total
 
 
 
+<br>
+<br>
+<br>
 
 
 
@@ -61,14 +64,18 @@ not at all. the dungeons scale into infinity. there is no end goal. Natural spaw
 
 
 
-
+<br>
+<br>
+<br>
 
 
 
 Dungeons scale infinitely. My dungeons are at my level, The natural mobs there are at my PWR. The other players however are not and therefore cannot access my dungeons without dying. My existence can be threatened. Do not get the wrong idea.
 
 
-
+<br>
+<br>
+<br>
 
 
 
@@ -76,14 +83,18 @@ No. the "evil" and "cursed" entities that you speak of translate in my world to 
 
 
 
-
+<br>
+<br>
+<br>
 
 
 there are several floors. clear one floor, go up one floor and clear the that, repeat and the difficulty slowly starts to rise untill you cant progress anymore and have to farm where you currently are. and yes, this goes on infinitely (probably).
 
 
 
-
+<br>
+<br>
+<br>
 
 
 
@@ -91,7 +102,9 @@ no. the enemies at the floor im at are at my level, and i can beat them. aslong 
 
 
 
-
+<br>
+<br>
+<br>
 
 
 
@@ -105,7 +118,9 @@ Sandstorm
 no. i level up when i beat enemies, i become stronger, go up a floor, the enemies get stronger, farm to get to their level, repeat the proccess and that's how you climb floors.
 
 
-
+<br>
+<br>
+<br>
 
 
 Reimu Hakurei
@@ -129,7 +144,9 @@ Hm, so you climb floors by gaining the power from dungeons after clearing them, 
 
 
 
-
+<br>
+<br>
+<br>
 
 
 
