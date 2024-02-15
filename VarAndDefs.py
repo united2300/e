@@ -132,7 +132,7 @@ try:
     # Logic-neccesary
     
     def Calculate_damage(type, a, t):
-        global p, e
+      global p, e
     
       if type == "SHeal": # Self Heal
         a.hp += a.matk
