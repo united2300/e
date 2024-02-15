@@ -143,7 +143,7 @@ try:
       # Calculate normal attack damage.
       if type == "Atk":
         if t.defense < a.atk:
-          t.hp -= (a.atk - t.def)
+          t.hp -= (a.atk - t.defense)
         else:
           if t.hp / 100 < 1:
             t.hp -= (t.hp / 100)
