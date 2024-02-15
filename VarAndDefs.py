@@ -1,4 +1,6 @@
 try:
+    import random
+    import time
     
     # Variables
     
@@ -87,8 +89,12 @@ try:
     class Dungeon:
         def __init__(self, level):
             self.level = level
+            self.spawning = False
             
         def spawn_enemy(self):
+            if self.spawning == False:
+              self.spawning == True
+            else:
             
             # Randomly select an enemy from the enemy dictionary
             enemy_name = random.choice(list(enemy_dict.keys()))
@@ -110,20 +116,17 @@ try:
             random_factor = random.randint(85, 115) / 100
             
             # Apply the random factor to the enemy's attributes
-            enemy_instance.hp = round(enemy_instance.hp * random_factor, 2)
-            enemy_instance.atk = round(enemy_instance.atk * random_factor, 2)
-            enemy_instance.matk = round(enemy_instance.matk * random_factor, 2)
-            enemy_instance.ratk = round(enemy_instance.ratk * random_factor, 2)
-            enemy_instance.mana = round(enemy_instance.mana * random_factor, 2)
-            enemy_instance.defense = round(enemy_instance.defense * random_factor, 2)
-            enemy_instance.spd = round(enemy_instance.spd * random_factor, 2)
+            e.hp = round(e.hp * random_factor, 2)
+            e.atk = round(e.atk * random_factor, 2)
+            e.matk = round(e.matk * random_factor, 2)
+            e.ratk = round(e.ratk * random_factor, 2)
+            e.mana = round(e.mana * random_factor, 2)
+            e.defense = round(e.defense * random_factor, 2)
+            e.spd = round(e.spd * random_factor, 2)
             
             print(f"You tracked down a level {e.level} {e.name}!")
             return e
     
-    # Example usage:
-    dungeon = Dungeon(level=1)
-    enemy = dungeon.spawn_enemy()
     
     
     
@@ -132,7 +135,6 @@ try:
     # Logic-neccesary
     
     def Calculate_damage(type, a, t):
-      global p, e
     
       if type == "SHeal": # Self Heal
         a.hp += a.matk
@@ -175,12 +177,7 @@ try:
         elif a.ratk > (t.spd / 6):
           t.hp -= (a.ratk / 12)
 
-      if t == p and type != "SHeal" and type != "GHeal":
-        p.hp = t.hp
-        e.hp = a.hp
-      elif t == e:
-        e.hp = t.hp
-        p.hp = a.hp
+      return t.hp
 except Exception as error:
     print(error)
     input("")
