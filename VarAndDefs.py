@@ -44,7 +44,7 @@ try:
             self.ratk = ratk
             self.mana = mana
             self.maxmana = mana
-            self.def = defense
+            self.defense = defense
             self.spd = spd
     
     
