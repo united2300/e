@@ -96,36 +96,36 @@ try:
               self.spawning == True
             else:
             
-            # Randomly select an enemy from the enemy dictionary
-            enemy_name = random.choice(list(enemy_dict.keys()))
-    
-            # set the enemy
-            e = enemy_dict[enemy_name]
-            
-            e.level += self.level
-            e.exp_reward += self.level
-            e.hp += (self.level * 2)
-            e.atk += (self.level / 5)
-            e.ratk += (self.level / 5)
-            e.matk += (self.level / 5)
-            e.mana += (self.level * 2)
-            e.defense += (self.level / 5)
-            e.spd += (self.level / 2)
-            
-            # Generate a random factor between 85 and 115 (equivalent to 0.85 and 1.15)
-            random_factor = random.randint(85, 115) / 100
-            
-            # Apply the random factor to the enemy's attributes
-            e.hp = round(e.hp * random_factor, 2)
-            e.atk = round(e.atk * random_factor, 2)
-            e.matk = round(e.matk * random_factor, 2)
-            e.ratk = round(e.ratk * random_factor, 2)
-            e.mana = round(e.mana * random_factor, 2)
-            e.defense = round(e.defense * random_factor, 2)
-            e.spd = round(e.spd * random_factor, 2)
-            
-            print(f"You tracked down a level {e.level} {e.name}!")
-            return e
+                # Randomly select an enemy from the enemy dictionary
+                enemy_name = random.choice(list(enemy_dict.keys()))
+        
+                # set the enemy
+                e = enemy_dict[enemy_name]
+                
+                e.level += self.level
+                e.exp_reward += self.level
+                e.hp += (self.level * 2)
+                e.atk += (self.level / 5)
+                e.ratk += (self.level / 5)
+                e.matk += (self.level / 5)
+                e.mana += (self.level * 2)
+                e.defense += (self.level / 5)
+                e.spd += (self.level / 2)
+                
+                # Generate a random factor between 85 and 115 (equivalent to 0.85 and 1.15)
+                random_factor = random.randint(85, 115) / 100
+                
+                # Apply the random factor to the enemy's attributes
+                e.hp = round(e.hp * random_factor, 2)
+                e.atk = round(e.atk * random_factor, 2)
+                e.matk = round(e.matk * random_factor, 2)
+                e.ratk = round(e.ratk * random_factor, 2)
+                e.mana = round(e.mana * random_factor, 2)
+                e.defense = round(e.defense * random_factor, 2)
+                e.spd = round(e.spd * random_factor, 2)
+                
+                print(f"You tracked down a level {e.level} {e.name}!")
+                return e
     
     
     
