@@ -169,4 +169,31 @@ def main():
             print("2. Buy Heal (+0.1 MATK)")
             print("3. Buy Lightning (+0.1 MATK)")
             spell_choice = input("Choose a spell to buy: ")
-            if spell
+            if spell_choice in ['1', '2', '3']:
+                mage_bar.buy_spell(player, list(mage_bar.spells.keys())[int(spell_choice) - 1])
+            else:
+                print("Invalid choice.")
+
+        elif choice == "4":
+            print("\n=== Ranger's Den ===")
+            print("1. Buy Iron Arrow (+0.1 RAN)")
+            print("2. Buy Silver Arrow (+0.1 RAN)")
+            print("3. Buy Magic Arrow (+0.1 RAN)")
+            arrow_choice = input("Choose an arrow to buy: ")
+            if arrow_choice in ['1', '2', '3']:
+                ranger_den.buy_arrow(player, list(ranger_den.arrows.keys())[int(arrow_choice) - 1])
+            else:
+                print("Invalid choice.")
+
+        elif choice == "5":
+            player.display_stats()
+
+        elif choice == "6":
+            print("Thanks for playing!")
+            break
+
+        else:
+            print("Invalid choice. Please choose again.")
+
+if __name__ == "__main__":
+    main()
