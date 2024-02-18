@@ -104,9 +104,29 @@ def print_player_stats(player):
                   floor -= 1
                   floor += 1
                   if (floor - 1) != -1 and (floor - 1) != 0:
-                    enemy = Enemy(name="Goblin", level=1, health=50, attack=10, defense=5, speed=8)
+                    enemy = Enemy(name="Goblin", level=1, health=50, attack=10, defense=0, speed=8)
                     enemy.set_stats_to_level(floor)
                     while True:
+                        if enemy.health < 0:
+                            print ("you won. nerd. >:(")
+                            player.exp += (enemy.maxhealth / 10) + (enemy.defense) + (enemy.attack / 2) + (enemy.speed / 2) + (floor * 5)
+                            if player.exp > player.exp_cap:
+                                player.attack += 0.5
+                                player.ranged_attack += 0.5
+                                player.magic_attack += 0.5
+                                player.defense += 0.2
+                                player.maxhealth += 5
+                                player.maxhealth *= 1.01
+                                player.maxmana += 5
+                                player.maxmana *= 1.01
+                                player.mana = player.maxmana
+                                player.health = player.maxhealth
+                                player.speed += 0.25
+                                player.exp = 0
+                            player.highest_floor_cleared = floor
+                            player.health = player.maxhealth
+                            player.mana = player.maxmana
+                            break
                         player.restore_mana(player.maxmana / 10)
                         if player.mana > player.maxmana:
                             player.mana = player.maxmana
