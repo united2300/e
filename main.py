@@ -182,7 +182,7 @@ try:
                         if choice == "1":
                             enemy.take_damage(player.attack)
                         
-                except Exception as E:
+                except Exception as e:
                     print (e)
                     print ("stupid monkey.!!..!!!")
                 
