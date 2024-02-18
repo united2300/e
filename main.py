@@ -98,12 +98,12 @@ try:
             
             if choice == "1":
                 print ("which Floor?")
-                print ("you can go to these floors: 1-", player.highest_floor_cleared)
+                print ("you can go to these floors: 1-", player.highest_floor_cleared + 1)
                 floor = input("")
                 try: # wierd way of making sure they dont input a letter or smth
                   floor -= 1
                   floor += 1
-                  if floor < player.highest_floor_cleared:
+                  if floor < player.highest_floor_cleared + 1:
                     enemy = Enemy(name="Goblin", level=1, health=50, attack=10, defense=0, speed=8)
                     enemy.set_stats_to_level(floor)
                     while True:
