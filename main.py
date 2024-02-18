@@ -107,8 +107,61 @@ def print_player_stats(player):
                     enemy = Enemy(name="Goblin", level=1, health=50, attack=10, defense=5, speed=8)
                     enemy.set_stats_to_level(floor)
                     while True:
- -----                     # INPUT COMBAT HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      
+                        player.restore_mana(player.maxmana / 10)
+                        if player.mana > player.maxmana:
+                            player.mana = player.maxmana
+
+                        player.heal(player.maxhealth / 100)
+                        if player.health > player.maxhealth:
+                            player.health = player.maxhealth
+
+                        print ("Health:", player.health, "/", player.maxhealth)
+                        print (enemy.name, "Health:", enemy.health, "/", enemy.maxhealth)
+                        print ("")
+                        print ("1. Melee attack")
+                        print ("2. Ranged attack")
+                        print ("3. Magic")
+                        print ("")
+                        print ("x. fuck this, this game is garbage wtf (exit)")
+
+                        choice = input("")
+                        if choice == "x":
+                          break
+                        if choice == "3":
+                          print ("spells:")
+                          for spell in player.spells:
+                              print (spell)
+                          print ("What spell to cast?")
+                          choice = input("")
+                          if choice == "Heal" or choice == "heal":
+                              if player.mana > 10:
+                                  player.heal(player.maxhealth / 3)
+                                  player.health = round(player.health)
+                                  if player.health > player.maxhealth:
+                                    player.health = player.maxhealth
+                                  player.mana -= 10
+                              else:
+                                  print ("no mana..?")
+                          if choice == "Magic bolt" or choice == "magic bolt" or choice == "Magic Bolt" or choice == "magicbolt" or choice == "Magicbolt" or choice == "MagicBolt":
+                              if player.mana > 10:
+                                  enemy.take_damage(player.magic_attack)
+                                  player.mana -= 10
+                              else:
+                                  print ("no mana..?")
+
+                        if choice == "2":
+                            arrows = 0
+                            for items in player.items:
+                                if items == "Arrow":
+                                    arrows += 1
+                            if arrows > 0:
+                                enemy.take_damage(player.ranged_attack)
+                            else:
+                                print ("no arrows..?")
+
+                        if choice == "1":
+                            enemy.take_damage(player.attack)
+                        
                 except:
                     print ("stupid monkey.!!..!!!")
                 
