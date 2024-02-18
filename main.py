@@ -35,7 +35,7 @@ try:
             self.mana += amount
     
     # Initialize the class
-    player = Player(name=input("Give me a name you stupid 3D monkey. --> "), level=1, exp=0, exp_cap=100, health=100, mana=100, defense=0, speed=1, attack=10, ranged_attack=12.5, magic_attack=10, highest_floor_cleared=0)
+    player = Player(name=input("Give me a name you stupid 3D monkey. --> "), level=1, exp=0, exp_cap=100, health=100, mana=100, defense=0, speed=1, attack=10, ranged_attack=12.5, magic_attack=10, highest_floor_cleared=1)
     
     class Enemy:
         def __init__(self, name, level, health, attack, defense, speed):
@@ -182,7 +182,8 @@ try:
                         if choice == "1":
                             enemy.take_damage(player.attack)
                         
-                except:
+                except Exception as E:
+                    print (e)
                     print ("stupid monkey.!!..!!!")
                 
             elif choice == "2":
