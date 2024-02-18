@@ -209,3 +209,5 @@ def print_player_stats(player):
 
 except Exception as e:
     print (e)
+    input("")
+input("")
