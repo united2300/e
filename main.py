@@ -67,19 +67,19 @@ try:
     
 
 
-def print_player_stats(player):
-    print("Player Stats:")
-    print(f"Name: {player.name}")
-    print(f"Level: {player.level}")
-    print(f"Experience: {player.exp}/{player.exp_cap}")
-    print(f"Health: {player.health}/{player.maxhealth}")
-    print(f"Mana: {player.mana}/{player.maxmana}")
-    print(f"Defense: {player.defense}")
-    print(f"Speed: {player.speed}")
-    print(f"Attack: {player.attack}")
-    print(f"Ranged Attack: {player.ranged_attack}")
-    print(f"Magic Attack: {player.magic_attack}")
-    print(f"Highest Floor Cleared: {player.highest_floor_cleared}")
+    def print_player_stats(player):
+        print("Player Stats:")
+        print(f"Name: {player.name}")
+        print(f"Level: {player.level}")
+        print(f"Experience: {player.exp}/{player.exp_cap}")
+        print(f"Health: {player.health}/{player.maxhealth}")
+        print(f"Mana: {player.mana}/{player.maxmana}")
+        print(f"Defense: {player.defense}")
+        print(f"Speed: {player.speed}")
+        print(f"Attack: {player.attack}")
+        print(f"Ranged Attack: {player.ranged_attack}")
+        print(f"Magic Attack: {player.magic_attack}")
+        print(f"Highest Floor Cleared: {player.highest_floor_cleared}")
 
     
     
