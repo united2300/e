@@ -18,6 +18,9 @@ try:
             self.ranged_attack = ranged_attack
             self.magic_attack = magic_attack
             self.highest_floor_cleared = highest_floor_cleared
+            self.weapons = []
+            self.items = []
+            self.spells = ["Heal", "Magic bolt"]
     
         def take_damage(self, damage):
             self.health -= damage
@@ -62,9 +65,74 @@ try:
     enemy = Enemy(name="Goblin", level=1, health=50, attack=10, defense=5, speed=8)
     
     
+
+
+def print_player_stats(player):
+    print("Player Stats:")
+    print(f"Name: {player.name}")
+    print(f"Level: {player.level}")
+    print(f"Experience: {player.exp}/{player.exp_cap}")
+    print(f"Health: {player.health}/{player.maxhealth}")
+    print(f"Mana: {player.mana}/{player.maxmana}")
+    print(f"Defense: {player.defense}")
+    print(f"Speed: {player.speed}")
+    print(f"Attack: {player.attack}")
+    print(f"Ranged Attack: {player.ranged_attack}")
+    print(f"Magic Attack: {player.magic_attack}")
+    print(f"Highest Floor Cleared: {player.highest_floor_cleared}")
+
+    
+    
     
     while True:
         while True:
+            print("Welcome to the game!")
+            print("1. Dungeon")
+            print("2. Player Menu")
+            print("3. Bestiary")
+            print("4. Grimoire")
+            print("5. Market")
+            print("x. Exit")
+            
+            choice = input("Enter your choice: ")
+            
+            if choice == "1":
+                print ("which Floor?")
+                print ("you can go to these floors: 1-", player.highest_floor_cleared)
+                floor = input("")
+                try: # wierd way of making sure they dont input a letter or smth
+                  floor -= 1
+                  floor += 1
+                  if (floor - 1) != -1 and (floor - 1) != 0:
+                    enemy = Enemy(name="Goblin", level=1, health=50, attack=10, defense=5, speed=8)
+                    enemy.set_stats_to_level(floor)
+                    while True:
+ -----                     # INPUT COMBAT HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                      
+                except:
+                    print ("stupid monkey.!!..!!!")
+                
+            elif choice == "2":
+                print ("1. Player Stats")
+                choice = input("")
+                if choice == "1":
+                    print_player_stats(player)
+                    
+                
+            elif choice == "3":
+                pass
+
+            elif choice == "4":
+                pass
+
+            elif choice == "5":
+                pass
+                
+            elif choice == "x":
+                print ("no. press the X, lazy.")
+                time.sleep(99999)
+            else:
+                print("Stupid monkey select a number between 1-4.")
 
 except Exception as e:
     print (e)
