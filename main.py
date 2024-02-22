@@ -1,6 +1,8 @@
 try:
     import random
     import time
+
+    menu = "main"
     
     class Player:
         def __init__(self, name, level, exp, exp_cap, health, mana, defense, speed, attack, ranged_attack, magic_attack, highest_floor_cleared):
@@ -23,7 +25,7 @@ try:
             self.spells = ["Heal", "Magic bolt"]
     
     # Initialize the class
-    player = Player(name=input("Give me a name you stupid 3D monkey. --> "), level=1, exp=0, exp_cap=100, health=100, mana=100, defense=0, speed=1, attack=10, ranged_attack=12.5, magic_attack=10, highest_floor_cleared=1)
+    player1 = Player(name=input("Give me a name you stupid 3D monkey. --> "), level=1, exp=0, exp_cap=100, health=100, mana=100, defense=0, speed=1, attack=10, ranged_attack=12.5, magic_attack=10, highest_floor_cleared=1)
     
     class Enemy:
         def __init__(self, name, level, health, attack, defense, speed):
@@ -64,8 +66,49 @@ try:
         print(f"Highest Floor Cleared: {player.highest_floor_cleared}")
 
 
+    def print_menus(menu):
+        if menu == "main":
+            print ("1. Dungeon")
+            print ("2. City")
+            print ("3. Player stats")
+        elif menu == "city":
+            print ("1. aDvEnTuReRs gUiLd")
+            print ("2. Smithy")
+            print ("3. Rangers Nest")
+            print ("4. Mages Den")
+        elif menu == "player_stats":
+            print_player_stats(player1)
+    
+    while True:
+        try: # Error Handling...
+            
+            while True:
+                
+                if menu == "main":
+                    print_menus(menu)
+                    print ("")
+                    choice = input("--> ")
+
+                if menu == "city":
+                    print_menus(menu)
+                    print ("")
+                    choice = input("--> ")
+
+                if menu == "player_stats":
+                    print_menus(menu)
+                    print ("")
+                    choice = input("--> ")
+                
+        except Exception as e:
+            print (e)
+            input("Press Enter to Exit")
+        
+    
+
 
 except Exception as e:
     print (e)
-    input("")
-input("")
+    input("Press Enter to Exit")
+
+print ("")
+input("Game Closing... Press Enter to Exit")
