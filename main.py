@@ -67,6 +67,7 @@ try:
 
 
     def print_menus(menu):
+        # main menus
         if menu == "main":
             print ("1. Dungeon")
             print ("2. City")
@@ -78,26 +79,66 @@ try:
             print ("4. Mages Den")
         elif menu == "player_stats":
             print_player_stats(player1)
+            
+        # sub menus
+        elif menu == "dungeon":
+            pass
+        elif menu == "smithy":
+            pass
+        elif menu == "rangers_nest":
+            pass
+        elif menu == "mages_den"
     
     while True:
         try: # Error Handling...
             
             while True:
-                
+
+# ~~~~~~~~~~~~~ Main menus ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
                 if menu == "main":
                     print_menus(menu)
                     print ("")
                     choice = input("--> ")
+                    
+                    if choice == "1":
+                        pass
+                    if choice == "2":
+                        menu = "city"
+                    if choice == "3":
+                        menu = "player_stats"
+                    else:
+                        menu = "main"
 
                 if menu == "city":
                     print_menus(menu)
                     print ("")
                     choice = input("--> ")
+                    if choice == "1":
+                        menu = "adventurers_guild"
+                    if choice == "2":
+                        menu = "smithy"
+                    if choice == "3":
+                        menu = "rangers_nest"
+                    if choice == "4":
+                        menu = "mages_nest"
+                    else:
+                        menu = "main"
 
                 if menu == "player_stats":
                     print_menus(menu)
                     print ("")
                     choice = input("--> ")
+                    menu = "main
+
+# ~~~~~~~~~~~~~ Sub menus ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
+                elif menu == "adventurers_guild":
+                    pass
+                elif menu == "smity":
+                    pass
+                elif menu == "rangers_nest":
+                    pass
+                elif menu == "mages_nest":
+                    pass
                 
         except Exception as e:
             print (e)
