@@ -13,7 +13,13 @@ try:
     # Main game loop
     while True:
         try:
-            while True:
+            menu = "main" # set the current menu
+            while True: # safe-guard error handling nested loop.
+# ~~~~~~~~~~~~  Main menu     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                while menu == "main":
+# ~~~~~~~~~~~~  Dungeon menu  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~  Player stats  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~  Shop menu     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
         # Error handling for looped nested try statement
         except Exception as e:
